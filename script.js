@@ -1,5 +1,8 @@
 
 
+function letterCombinations(input_digit) {
+  //Complete the function	
+	
 let tel={
 	0:"0",
 	1:"1",
@@ -13,8 +16,6 @@ let tel={
 	9:"wxyz"
 }
 let ans=[];
-function letterCombinations(input_digit) {
-  //Complete the function	
 	function findcombination(curidx,curcom) {
 		
 		if(input_digit.length<=curidx){
