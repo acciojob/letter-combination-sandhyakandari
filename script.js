@@ -1,3 +1,5 @@
+
+
 let tel={
 	2:"abc",
 	3:"def",
@@ -8,21 +10,22 @@ let tel={
 	8:"tuv",
 	9:"wxyz"
 }
+let ans=[];
 function letterCombinations(input_digit) {
-  //Complete the function
-	let ans=[];
+  //Complete the function	
 	function findcombination(curidx,curcom) {
 		
-		if(curidx==input_digit.length){
+		if(input_digit.length<=curidx){
 			ans.push(curcom);
+      return;
 		}
 		let curchar=input_digit[curidx];
-		for(int i=0;i<tel.curchar.length;i++){
+		for(let i=0;i<tel[curchar].length;i++){
 			findcombination(curidx+1,curcom+tel[curchar][i]);
 		}
 	}
 
-	findcom(0,"");
+	findcombination(0,"");
 	return ans;
 }
 
